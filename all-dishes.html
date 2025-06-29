@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <style>
+    
+        .custom-gallery-container {
+            max-width: 1200px;
+            margin:auto;
+               margin-bottom: 5%;
+        }
+
+        .custom-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+      .custom-gallery-item img {
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+        .custom-gallery-item img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Modal Styles */
+        .custom-gallery-modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .custom-gallery-modal img {
+            max-width: 90%;
+            max-height: 80%;
+            margin-bottom: 10px;
+            border-radius: 6px;
+        }
+
+        .custom-gallery-controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .custom-gallery-button {
+            background: #fff;
+            color: #000;
+            padding: 8px 14px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .custom-gallery-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .custom-gallery-arrow {
+            font-size: 40px;
+            color: #fff;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            user-select: none;
+        }
+
+        .custom-gallery-arrow.left {
+            left: 30px;
+        }
+
+        .custom-gallery-arrow.right {
+            right: 30px;
+        }
+        .custom-gallery-container h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-size: 58px;
+    font-weight: 600;
+}
+body{
+    background: #212428;
+}
+
+@media (min-width:240px) and (max-width:479px) {
+  .custom-gallery-container h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-size: 24px !important;
+    font-weight: 600;
+}
+.custom-gallery-grid {
+    gap: 10px !important;
+
+}
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="custom-gallery-container">
+        <h2 style="text-align:center">Food Gallery</h2>
+        <div class="custom-gallery-grid" id="customGalleryGrid">
+            <!-- Add your images here -->
+                 <div class="custom-gallery-item"><img src="SURAT.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="surat2.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish1.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish2.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish3.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish4.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish5.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish6.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish7.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish8.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish9.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish10.jpeg" alt="Image 1"></div>
+               <div class="custom-gallery-item"><img src="dish11.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish12.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish13.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish14.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish15.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish16.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish17.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish18.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish19.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish20.jpeg" alt="Image 1"></div>
+
+                        <div class="custom-gallery-item"><img src="dish21.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish22.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish23.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish24.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish25.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish26.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish27.jpeg" alt="Image 1"></div>
+
+
+             <div class="custom-gallery-item"><img src="dish28.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish29.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish30.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish31.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish32.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish33.jpeg" alt="Image 1"></div>
+             <div class="custom-gallery-item"><img src="dish34.jpeg" alt="Image 1"></div>
+            <div class="custom-gallery-item"><img src="dish35.jpeg" alt="Image 1"></div>
+              
+            <!-- Add more as needed -->
+        </div>
+    </div>
+
+    <div class="custom-gallery-modal" id="customGalleryModal">
+        <span class="custom-gallery-close" onclick="closeGalleryModal()">×</span>
+        <span class="custom-gallery-arrow left" onclick="changeImage(-1)">&#10094;</span>
+        <img id="customModalImg" src="" alt="Enlarged Image" />
+        <div class="custom-gallery-controls">
+            <a id="customDownloadBtn" href="" download class="custom-gallery-button">Download</a>
+        </div>
+        <span class="custom-gallery-arrow right" onclick="changeImage(1)">&#10095;</span>
+    </div>
+
+    <script>
+        const modal = document.getElementById('customGalleryModal');
+        const modalImg = document.getElementById('customModalImg');
+        const downloadBtn = document.getElementById('customDownloadBtn');
+        const galleryImages = document.querySelectorAll('#customGalleryGrid img');
+        let currentIndex = 0;
+
+        galleryImages.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                openGalleryModal(index);
+            });
+        });
+
+        function openGalleryModal(index) {
+            currentIndex = index;
+            const src = galleryImages[currentIndex].src;
+            modalImg.src = src;
+            downloadBtn.href = src;
+            modal.style.display = 'flex';
+        }
+
+        function closeGalleryModal() {
+            modal.style.display = 'none';
+        }
+
+        function changeImage(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = galleryImages.length - 1;
+            if (currentIndex >= galleryImages.length) currentIndex = 0;
+
+            const src = galleryImages[currentIndex].src;
+            modalImg.src = src;
+            downloadBtn.href = src;
+        }
+
+        // Close modal on outside click
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                closeGalleryModal();
+            }
+        }
+    </script>
+</body>
+
+</html>
